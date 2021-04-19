@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OnlineMonitor": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
