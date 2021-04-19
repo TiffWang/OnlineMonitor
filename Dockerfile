@@ -5,10 +5,10 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
-COPY ["OnlineMonitor/OnlineMonitor.csproj", "OnlineMonitor/"]
-RUN dotnet restore "OnlineMonitor/OnlineMonitor.csproj"
+COPY ["OnlineMonitor.csproj", ""]
+RUN dotnet restore "./OnlineMonitor.csproj"
 COPY . .
-WORKDIR "/src/OnlineMonitor"
+WORKDIR "/src/."
 RUN dotnet build "OnlineMonitor.csproj" -c Release -o /app/build
 
 FROM build AS publish
